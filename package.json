@@ -8,16 +8,16 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "build": "export NODE_ENV=production; yarn build:js;",
+        "build": "set NODE_ENV=production; yarn build:js;",
         "build:js": "./node_modules/grunt/bin/grunt build",
         "build:readme": "./node_modules/doctoc/doctoc.js ./*.md",
         "bump": "./bin/bump.js",
         "doc": "./node_modules/.bin/esdoc",
         "test": "jest",
         "test:ci": "jest --coverage --runInBand",
-        "watch:dashboard": "export NODE_ENV=development; webpack-dashboard -- ./node_modules/grunt/bin/grunt watch",
-        "watch": "export NODE_ENV=development; ./node_modules/grunt/bin/grunt watch",
-        "watch:prod": "export NODE_ENV=production; ./node_modules/grunt/bin/grunt watch",
+        "watch:dashboard": "set NODE_ENV=development; webpack-dashboard -- ./node_modules/grunt/bin/grunt watch",
+        "watch": "set NODE_ENV=development; ./node_modules/grunt/bin/grunt watch",
+        "watch:prod": "set NODE_ENV=production; ./node_modules/grunt/bin/grunt watch",
         "format": "prettier --write '{docs,src,stylesheets-previewer}/**/*.{js,ts,json,md}'"
     },
     "devDependencies": {
